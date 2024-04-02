@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/demo
+    overwrite: yes
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+
+hooks:
+  BeforeInstall:
+    - location: Scripts/remove_before.sh
+  ApplicationStart:
+    - location: Scripts/deploy.sh
+      timeout: 60
+      runas: ubuntu
