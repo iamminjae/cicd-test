@@ -4,7 +4,7 @@ JAR_NAME=$(basename $BUILD_JAR)
 echo "> build : $JAR_NAME" >> /home/ubuntu/deploy.log
 
 echo "> build 파일 복사" >> /home/ubuntu/deploy.log
-DEPLOY_PATH=/home/ubuntu/demo
+DEPLOY_PATH=/home/ubuntu/demo/
 cp $BUILD_JAR $DEPLOY_PATH
 
 echo "> 실행중인 애플리케이션 pid 확인" >> /home/ubuntu/deploy.log
