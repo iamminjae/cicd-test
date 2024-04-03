@@ -1,5 +1,5 @@
 #!/bin/bash
-BUILD_JAR=$(ls /home/ubuntu/cicd-test/build/libs/*.jar)
+BUILD_JAR=$(ls /home/ubuntu/demo/build/libs/*.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 echo "> build : $JAR_NAME" >> /home/ubuntu/deploy.log
 
